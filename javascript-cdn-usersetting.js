@@ -24,12 +24,12 @@ function create_user_setting() {
     let contact_ = '';
     let pp_control = '';
  
-    loginURL = 'https://www.xxdice.com/users/loginUser/';
-    signUPURL = 'https://www.xxdice.com/users/join/';
-    noticeURL = 'https://www.xxdice.com/notice/';
-    faq_page = 'https://www.xxdice.com/faq/';
-    contact_ = 'https://www.xxdice.com/contact_us/';
-    pp_control = 'https://www.xxdice.com/parental_controls/';
+    loginURL = 'https://www.xodice.com/users/loginUser/';
+    signUPURL = 'https://www.xodice.com/users/join/';
+    noticeURL = 'https://www.xodice.com/notice/';
+    faq_page = 'https://www.xodice.com/faq/';
+    contact_ = 'https://www.xodice.com/contact_us/';
+    pp_control = 'https://www.xodice.com/parental_controls/';
     
 
     if (isUserAuth === "False") {
@@ -94,13 +94,13 @@ function create_user_setting() {
         let faq_page = '';
         let contact_page = '';
         let parent_controls = '';
-        dashboard = 'https://www.xxdice.com/users/dashboard/';
-        submissionPage = 'https://www.xxdice.com/users/submission/';
-        userLikes = 'https://www.xxdice.com/users/likes/';
-        logoutUser = 'https://www.xxdice.com/users/logout_user';
-        faq_page = 'https://www.xxdice.com/faq/';
-        contact_page = 'https://www.xxdice.com/contact_us/';
-        parent_controls = 'https://www.xxdice.com/parental_controls/';
+        dashboard = 'https://www.xodice.com/users/dashboard/';
+        submissionPage = 'https://www.xodice.com/users/submission/';
+        userLikes = 'https://www.xodice.com/users/likes/';
+        logoutUser = 'https://www.xodice.com/users/logout_user';
+        faq_page = 'https://www.xodice.com/faq/';
+        contact_page = 'https://www.xodice.com/contact_us/';
+        parent_controls = 'https://www.xodice.com/parental_controls/';
         popupMessage = `
         <div class="account_selection" >
 
