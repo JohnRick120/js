@@ -95,8 +95,8 @@ function create_popup2(username, firstH1, secondH2, url) {
     var popup = document.createElement("div");
     popup.className = "entryWarning";
     popup.id = "entryWarningID";
-    let notice_url = "http://127.0.0.1:8000/notice/";
-    let termsOfUse = "http://127.0.0.1:8000/terms-of-use/";
+    let notice_url = "https://www.xodice.com/notice/";
+    let termsOfUse = "https://www.xodice.com/terms-of-use/";
     let popupMessage = `
     <div class="popup-content">
         <h2>${firstH1}</h2>
@@ -222,7 +222,7 @@ function addElementsToDOM(data, input) {
         if (input) {
             for (let value of tags) {
                 var link1 = document.createElement("a");
-                var url = "http://127.0.0.1:8000/search/" + encodeURIComponent(value);
+                var url = "https://www.xodice.com/search/" + encodeURIComponent(value);
                 link1.href = url;
                 link1.textContent = value;
                 link1.id = "yourLinkId";
@@ -246,7 +246,7 @@ searchForm.addEventListener('submit', function (event) {
     event.preventDefault();
     let stupid_value = document.getElementById('searchID');
     let stupid_value_value = stupid_value.value;
-    let url = `http://127.0.0.1:8000/search/${stupid_value_value}`;
+    let url = `https://www.xodice.com/search/${stupid_value_value}`;
     window.location.href = url;
     let yes = getCookie('searchValue');
     if (yes != '') {
@@ -310,11 +310,11 @@ function openMobilePopup() {
     var popup = document.createElement("div");
     popup.className = "popup2";
     popup.id = "myPopup";
-    let posts_dev = 'http://127.0.0.1:8000/posts';
-    let joins = 'http://127.0.0.1:8000/users/join/';
-    let dashboard = 'http://127.0.0.1:8000/users/dashboard/';
-    let submission = 'http://127.0.0.1:8000/submission/';
-    let premium = 'http://127.0.0.1:8000/premium/';
+    let posts_dev = 'https://www.xodice.com/posts';
+    let joins = 'https://www.xodice.com/users/join/';
+    let dashboard = 'https://www.xodice.com/users/dashboard/';
+    let submission = 'https://www.xodice.com/submission/';
+    let premium = 'https://www.xodice.com/premium/';
     let popupMessage = '';
     if (authenticated == "False") {
         popupMessage = `
