@@ -23,22 +23,15 @@ function create_user_setting() {
     let faq_page = '';
     let contact_ = '';
     let pp_control = '';
-    if (server_status_ === 'True') {
-        loginURL = 'https://www.xxdice.com/users/loginUser/';
-        signUPURL = 'https://www.xxdice.com/users/join/';
-        noticeURL = 'https://www.xxdice.com/notice/';
-        faq_page = 'https://www.xxdice.com/faq/';
-        contact_ = 'https://www.xxdice.com/contact_us/';
-        pp_control = 'https://www.xxdice.com/parental_controls/';
-    }
-    else {
-        loginURL = 'http://127.0.0.1:8000/users/loginUser/';
-        signUPURL = 'http://127.0.0.1:8000/users/join/';
-        noticeURL = 'http://127.0.0.1:8000/notice/';
-        faq_page = 'http://127.0.0.1:8000/faq/';
-        contact_ = 'http://127.0.0.1:8000/contact_us/';
-        pp_control = 'http://127.0.0.1:8000/parental_controls/';
-    }
+ 
+    loginURL = 'https://www.xxdice.com/users/loginUser/';
+    signUPURL = 'https://www.xxdice.com/users/join/';
+    noticeURL = 'https://www.xxdice.com/notice/';
+    faq_page = 'https://www.xxdice.com/faq/';
+    contact_ = 'https://www.xxdice.com/contact_us/';
+    pp_control = 'https://www.xxdice.com/parental_controls/';
+    
+
     if (isUserAuth === "False") {
         popupMessage = `
         <div class="account_selection" >
@@ -101,24 +94,13 @@ function create_user_setting() {
         let faq_page = '';
         let contact_page = '';
         let parent_controls = '';
-        if (server_status_ === 'True') {
-            dashboard = 'https://www.xxdice.com/users/dashboard/';
-            submissionPage = 'https://www.xxdice.com/users/submission/';
-            userLikes = 'https://www.xxdice.com/users/likes/';
-            logoutUser = 'https://www.xxdice.com/users/logout_user';
-            faq_page = 'https://www.xxdice.com/faq/';
-            contact_page = 'https://www.xxdice.com/contact_us/';
-            parent_controls = 'https://www.xxdice.com/parental_controls/';
-        }
-        else {
-            dashboard = 'http://127.0.0.1:8000/users/dashboard/';
-            submissionPage = 'http://127.0.0.1:8000/users/submission/';
-            userLikes = 'http://127.0.0.1:8000/users/likes/';
-            logoutUser = 'http://127.0.0.1:8000/users/logout_user';
-            faq_page = 'http://127.0.0.1:8000/faq/';
-            contact_page = 'http://127.0.0.1:8000/contact_us/';
-            parent_controls = 'http://127.0.0.1:8000/parental_controls/';
-        }
+        dashboard = 'https://www.xxdice.com/users/dashboard/';
+        submissionPage = 'https://www.xxdice.com/users/submission/';
+        userLikes = 'https://www.xxdice.com/users/likes/';
+        logoutUser = 'https://www.xxdice.com/users/logout_user';
+        faq_page = 'https://www.xxdice.com/faq/';
+        contact_page = 'https://www.xxdice.com/contact_us/';
+        parent_controls = 'https://www.xxdice.com/parental_controls/';
         popupMessage = `
         <div class="account_selection" >
 
