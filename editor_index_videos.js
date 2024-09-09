@@ -42,6 +42,16 @@ function backEnd_request2(endpoint, values, callback) {
         callback({ status: 'error' });
     });
 }
+function showPopup_index(message) {
+    popup_bullshit.style.display = 'block';
+    innerPopup_h5.innerHTML = message;
+    setTimeout(function () {
+        var autoDismissAlert = document.getElementById('index_editor_popup');
+        if (autoDismissAlert) {
+            autoDismissAlert.style.display = 'none';
+        }
+    }, 2000);
+}
 function delete_index_video(post_id, table) {
     let allTogether = `${post_id};${table}`;
     backEnd_request('index_editor_delete', allTogether);
@@ -237,7 +247,67 @@ function add_new_video_adder(video_id3) {
     close_DB1111.style.display = 'none';
 }
 ;
-function edit_index_video(post_id2) {
-    console.log(post_id2);
+function delete_one_index_video(video_ID1, adder0) {
+    let values2send = `${video_ID1};${adder0}`;
+    backEnd_request('del_only_one', values2send);
+    showPopup_index('One Video Removed....');
+}
+;
+function close_add_one_video_popup() {
+    let close_DB1111 = document.getElementById('adding_oneVideoID');
+    document.body.removeChild(close_DB1111);
+    close_DB1111.style.display = 'none';
+}
+;
+function add_one_video(adder1001) {
+    var mobileUserPanel = document.createElement("div");
+    mobileUserPanel.className = "adding_oneVideo";
+    mobileUserPanel.id = "adding_oneVideoID";
+    let popup12Message = `
+        <div class="mobile_adding_oneVideo">
+
+            <div id="closeButtonThing">
+                <button onclick="close_add_one_video_popup()">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+
+
+
+            <div class="form_section" >
+
+                <form id="form4adding1video">
+                    <label for="comment">Video Title:</label><br>
+                    <textarea id="videoForm_title" name="videoForm_title" rows="4" cols="50" placeholder="Enter the video title here (only 1)"></textarea><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            
+            </div>
+
+        </div>
+    `;
+    mobileUserPanel.innerHTML = popup12Message;
+    document.body.appendChild(mobileUserPanel);
+    mobileUserPanel.style.display = "flex";
+    mobileUserPanel.style.flexDirection = 'column';
+    let form4adding1video = document.getElementById('form4adding1video');
+    form4adding1video.addEventListener('submit', function (event) {
+        event.preventDefault();
+        let video_title = document.getElementById('videoForm_title');
+        let values2222 = video_title.value;
+        let final_value = `${values2222};${adder1001}`;
+        backEnd_request2('adding_one_video_2_index', final_value, (response) => {
+            if (response.status === 'success') {
+                const data = response.data;
+                showPopup_index('Video added successfully..');
+            }
+            else {
+                showPopup_index('Something went wrong.');
+            }
+        });
+    });
+}
+function edit_index_video(post_id2, adder0) {
 }
 ;
